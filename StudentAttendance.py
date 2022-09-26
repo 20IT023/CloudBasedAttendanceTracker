@@ -16,4 +16,7 @@ for j in range(0, 1):
             cv2.imwrite('G:/Vs code/CloudBasedTracker/' + current_time + '.jpg', image)
     del (camera)
 
+    clients3 = boto3.client('s3', region_name='us-east-1')
+    clients3.upload_file("Hourly Class Images/"+current_time+'.jpg', 'add your S3 bucket name', current_time+'.jpg')
+
     time.sleep(20)
