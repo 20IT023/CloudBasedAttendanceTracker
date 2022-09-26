@@ -13,7 +13,7 @@ for j in range(0, 1):
     for i in range(20):
         return_value, image = camera.read()
         if (i == 19):
-            cv2.imwrite('G:/Vs code/AI-Powered-Hourly-Attendance-Capturing-System-master/' + current_time + '.jpg', image)
+            cv2.imwrite('G:/Vs code/CloudBasedTracker/' + current_time + '.jpg', image)
     del (camera)
 
     time.sleep(20)
